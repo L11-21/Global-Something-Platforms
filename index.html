@@ -43,20 +43,62 @@
     </div>
   </section>
 
- <!-- Embedded Spreadsheet -->
+ <!-- Embedded Spreadsheet Section with Custom Emblem Cover Overlay -->
   <section id="sheet" class="max-w-7xl mx-auto px-6 py-16">
     <div class="text-center mb-10">
-      <h2 class="text-3xl font-semibold text-gray-900">Live Data Research</h2>
-      <p class="text-gray-600 mt-3">Enterprise Agentic Fabrics Startup Corporate Report</p>
+      <h2 class="text-3xl font-semibold text-gray-900">Live Data Dashboard</h2>
+      <p class="text-gray-600 mt-3">Enterprise Agent Fabrics • FOF</p>
     </div>
 
-    <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-lg bg-white">
+    <!-- Frame Container -->
+    <div class="relative border border-gray-200 rounded-2xl overflow-hidden shadow-lg bg-white h-[800px]">
+      
+      <!-- Interactive Cover Page Overlay -->
+      <div id="doc-cover" class="absolute inset-0 z-20 bg-gradient-to-br from-gray-900 via-slate-800 to-black text-white p-10 flex flex-col justify-between transition-opacity duration-500">
+        
+        <!-- Top Cover Header -->
+        <div class="flex justify-between items-center text-xs tracking-widest text-blue-400 font-mono uppercase">
+          <span>Confidential • Internal Report</span>
+          <span>EAF Corporate Readiness</span>
+        </div>
+
+        <!-- Center Block with Emblem Image -->
+        <div class="max-w-2xl mx-auto text-center my-auto">
+          <!-- Featured Image Seal -->
+          <div class="mb-6 flex justify-center">
+            <img src="https://i.imgur.com/7BaYtq5.png" 
+                 alt="Enterprise Agent Fabrics Emblem" 
+                 class="w-48 h-48 md:w-56 md:h-56 object-contain rounded-full shadow-2xl border-2 border-blue-500/30">
+          </div>
+
+          <h3 class="text-3xl md:text-4xl font-bold tracking-tight mb-3">
+            EAF_Corporate_Readiness
+          </h3>
+          <p class="text-gray-400 text-sm md:text-base mb-8 max-w-lg mx-auto">
+            Interactive corporate assessment spreadsheet and dynamic metrics dashboard.
+          </p>
+
+          <button onclick="document.getElementById('doc-cover').classList.add('hidden')" 
+                  class="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-3.5 rounded-xl shadow-lg hover:shadow-blue-500/25 transition cursor-pointer">
+            <i class="fas fa-eye"></i>
+            Open Live Document
+          </button>
+        </div>
+
+        <!-- Bottom Footer Meta -->
+        <div class="text-center text-xs text-gray-500 border-t border-gray-800 pt-4">
+          Click above to remove the cover page and interact with the live embedded dataset.
+        </div>
+      </div>
+
+      <!-- Live Google Sheet (Behind Cover) -->
       <iframe 
         src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTWGIF1Ri46GsKoa9ScaQQw0UyJ-uAs4VH_DcaLUSbVjZDO385C2Kj1RrSJdYw7lAUp6DoaQSzwsFnS/pubhtml?widget=true&amp;headers=false" 
         width="100%" 
-        height="800" 
+        height="100%" 
         style="border: none;">
       </iframe>
+
     </div>
   </section>
 
